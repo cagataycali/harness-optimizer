@@ -126,4 +126,4 @@ Dockerfile
 .dockerignore
 
 # hatch-vcs generated
-harness_optimizer/_version.py
+strands_harness_optimizer/_version.py

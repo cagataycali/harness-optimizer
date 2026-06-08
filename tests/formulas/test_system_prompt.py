@@ -3,7 +3,7 @@
 import pytest
 from strands.hooks.events import BeforeInvocationEvent
 
-from harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.formulas import SystemPromptFormula
 
 
 class TestSystemPromptFormulaInit:

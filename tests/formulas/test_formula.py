@@ -3,7 +3,7 @@
 import pytest
 from strands.hooks.events import AfterInvocationEvent, BeforeInvocationEvent
 
-from harness_optimizer.formulas import Formula
+from strands_harness_optimizer.formulas import Formula
 
 
 class ConcreteFormula(Formula):

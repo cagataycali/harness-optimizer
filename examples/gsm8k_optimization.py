@@ -27,12 +27,12 @@ from strands import Agent
 from strands.models import BedrockModel
 from strands_tools import shell
 
-from harness_optimizer.data import DataLoader
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.adapters import apply_formulas_on_strands_agent
-from harness_optimizer.rewards import RewardFunction
-from harness_optimizer.optimizers import ContrastiveReflectionOptimizer
-from harness_optimizer.utils import load_builtin_template
+from strands_harness_optimizer.data import DataLoader
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
+from strands_harness_optimizer.rewards import RewardFunction
+from strands_harness_optimizer.optimizers import ContrastiveReflectionOptimizer
+from strands_harness_optimizer.utils import load_builtin_template
 
 
 # --- Reward function: extract final number and compare ---

@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "harness-optimizer"
+name = "strands-harness-optimizer"
 dynamic = ["version"]
 description = "A framework for optimizing LLM agent context through Formulas"
 readme = "README.md"
@@ -43,14 +43,14 @@ dev = [
 source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "harness_optimizer/_version.py"
+version-file = "strands_harness_optimizer/_version.py"
 
 [tool.hatch.build.targets.wheel]
-packages = ["harness_optimizer"]
+packages = ["strands_harness_optimizer"]
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "harness_optimizer",
+    "strands_harness_optimizer",
     "tests",
     "README.md",
     "LICENSE",
@@ -63,12 +63,12 @@ features = ["dev"]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args}"
 lint = [
-    "black --check harness_optimizer tests",
-    "isort --check-only harness_optimizer tests",
+    "black --check strands_harness_optimizer tests",
+    "isort --check-only strands_harness_optimizer tests",
 ]
 format = [
-    "black harness_optimizer tests",
-    "isort harness_optimizer tests",
+    "black strands_harness_optimizer tests",
+    "isort strands_harness_optimizer tests",
 ]
 
 [tool.black]

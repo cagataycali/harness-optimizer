@@ -16,14 +16,14 @@ from dotenv import load_dotenv
 from strands import Agent
 from strands.models import BedrockModel
 
-from harness_optimizer.data import Dataset, DataLoader
-from harness_optimizer.datamodels import Reward, Rollout
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.adapters import apply_formulas_on_strands_agent
-from harness_optimizer.rewards import RewardFunction
-from harness_optimizer.optimizers import FormulaOptimizer
-from harness_optimizer.rollout_engines import LocalRolloutEngine
-from harness_optimizer.trainer import Trainer
+from strands_harness_optimizer.data import Dataset, DataLoader
+from strands_harness_optimizer.datamodels import Reward, Rollout
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
+from strands_harness_optimizer.rewards import RewardFunction
+from strands_harness_optimizer.optimizers import FormulaOptimizer
+from strands_harness_optimizer.rollout_engines import LocalRolloutEngine
+from strands_harness_optimizer.trainer import Trainer
 
 load_dotenv()
 

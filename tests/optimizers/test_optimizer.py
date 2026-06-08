@@ -2,8 +2,8 @@
 
 import pytest
 
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.optimizers import FormulaOptimizer
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.optimizers import FormulaOptimizer
 
 
 class PickBestOptimizer(FormulaOptimizer):

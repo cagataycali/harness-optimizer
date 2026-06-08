@@ -1,6 +1,6 @@
 """Tests for DataLoader — verifying Dataset + Sampler integration."""
 
-from harness_optimizer.data import DataLoader, Dataset
+from strands_harness_optimizer.data import DataLoader, Dataset
 
 
 class ListDataset(Dataset):

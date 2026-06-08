@@ -18,8 +18,8 @@ The built-in `StrandsAdapter` connects Formulas to [strands-agents](https://gith
 ```python
 from strands import Agent
 from strands.models import BedrockModel
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.adapters import StrandsAdapter
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import StrandsAdapter
 
 model = BedrockModel(model_id="us.anthropic.claude-haiku-4-5-20251001-v1:0")
 agent = Agent(model=model, system_prompt="You are a helpful assistant.")
@@ -36,7 +36,7 @@ response = agent("Write a hello world program")
 ### Convenience function
 
 ```python
-from harness_optimizer.adapters import apply_formulas_on_strands_agent
+from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
 
 agent = apply_formulas_on_strands_agent(agent, [formula])
 ```
@@ -46,7 +46,7 @@ agent = apply_formulas_on_strands_agent(agent, [formula])
 `StrandsAgentWithFormulas` accepts formulas directly in the constructor:
 
 ```python
-from harness_optimizer.adapters import StrandsAgentWithFormulas
+from strands_harness_optimizer.adapters import StrandsAgentWithFormulas
 
 agent = StrandsAgentWithFormulas(
     model=model,
@@ -60,8 +60,8 @@ agent = StrandsAgentWithFormulas(
 Subclass `AgentAdapter` to support a different agent framework:
 
 ```python
-from harness_optimizer.adapters import AgentAdapter
-from harness_optimizer.formulas import Formula
+from strands_harness_optimizer.adapters import AgentAdapter
+from strands_harness_optimizer.formulas import Formula
 
 class MyFrameworkAdapter(AgentAdapter):
 

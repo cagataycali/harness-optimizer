@@ -11,7 +11,7 @@ Dataset and DataLoader follow PyTorch conventions (adapted with stdlib, no torch
 Subclass `Dataset` and implement `__getitem__` and `__len__`:
 
 ```python
-from harness_optimizer.data import Dataset
+from strands_harness_optimizer.data import Dataset
 
 class MathDataset(Dataset):
     def __init__(self, problems):
@@ -45,7 +45,7 @@ dataset = load_dataset("openai/gsm8k", "main", split="test[:100]")
 Wraps a Dataset with batching and shuffling:
 
 ```python
-from harness_optimizer.data import DataLoader
+from strands_harness_optimizer.data import DataLoader
 
 loader = DataLoader(dataset, batch_size=4, shuffle=True)
 for batch in loader:
@@ -62,9 +62,9 @@ The engine generates rollouts by invoking an agent on data samples.
 Framework-agnostic engine for local agents. Uses `agent_create` and `agent_invoke` callables for thread-safe parallel execution:
 
 ```python
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.adapters import apply_formulas_on_strands_agent
-from harness_optimizer.rollout_engines import LocalRolloutEngine
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
+from strands_harness_optimizer.rollout_engines import LocalRolloutEngine
 
 formula = SystemPromptFormula(system_prompt="You are helpful.")
 
@@ -96,7 +96,7 @@ rollouts = list(engine.generate_batch([{"prompt": "What is 2+3?"}]))
 For remote AgentCore runtimes. Params are included in the invocation payload:
 
 ```python
-from harness_optimizer.rollout_engines import AgentCoreRolloutEngine
+from strands_harness_optimizer.rollout_engines import AgentCoreRolloutEngine
 
 engine = AgentCoreRolloutEngine(
     agent_arn="arn:aws:bedrock-agentcore:us-west-2:123:runtime/abc",
@@ -110,7 +110,7 @@ engine = AgentCoreRolloutEngine(
 Subclass `AgentRolloutEngine` and implement `generate_batch`:
 
 ```python
-from harness_optimizer.rollout_engines import AgentRolloutEngine
+from strands_harness_optimizer.rollout_engines import AgentRolloutEngine
 
 class MyEngine(AgentRolloutEngine):
     def generate_batch(self, data_samples):
@@ -145,7 +145,7 @@ The engine calls `ensure_sync_params()` before each batch:
 The Trainer ties everything together in an automated loop:
 
 ```python
-from harness_optimizer.trainer import Trainer
+from strands_harness_optimizer.trainer import Trainer
 
 trainer = Trainer(
     formula=formula,

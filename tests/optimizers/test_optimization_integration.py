@@ -15,11 +15,11 @@ from dotenv import load_dotenv
 from strands import Agent
 from strands.models import BedrockModel
 
-from harness_optimizer.adapters import StrandsAdapter
-from harness_optimizer.datamodels import Reward, Rollout
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.optimizers import FormulaOptimizer
-from harness_optimizer.rewards import RewardFunction
+from strands_harness_optimizer.adapters import StrandsAdapter
+from strands_harness_optimizer.datamodels import Reward, Rollout
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.optimizers import FormulaOptimizer
+from strands_harness_optimizer.rewards import RewardFunction
 
 load_dotenv()
 

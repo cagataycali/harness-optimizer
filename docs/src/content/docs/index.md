@@ -24,8 +24,8 @@ pip install harness-optimizer
 
 ```python
 from strands import Agent
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.adapters import apply_formulas_on_strands_agent
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
 
 formula = SystemPromptFormula(system_prompt="You are a helpful assistant.")
 agent = Agent(model=model)

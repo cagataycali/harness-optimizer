@@ -14,7 +14,7 @@ Formulas define:
 The built-in `SystemPromptFormula` manages a system prompt string as its tunable parameter.
 
 ```python
-from harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.formulas import SystemPromptFormula
 
 # Create a formula
 formula = SystemPromptFormula(system_prompt="You are a helpful coding assistant.")
@@ -34,7 +34,7 @@ formula.update_params({"system_prompt": "You are an expert Python developer."})
 Subclass `Formula` and implement the abstract methods:
 
 ```python
-from harness_optimizer.formulas import Formula
+from strands_harness_optimizer.formulas import Formula
 from strands.hooks.events import BeforeInvocationEvent
 
 class ToolDescriptionFormula(Formula):

@@ -2,7 +2,7 @@
 
 import pytest
 
-from harness_optimizer.rewards import RewardFunction
+from strands_harness_optimizer.rewards import RewardFunction
 
 
 class MatchReward(RewardFunction):
