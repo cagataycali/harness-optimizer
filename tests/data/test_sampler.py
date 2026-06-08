@@ -2,7 +2,7 @@
 
 import random
 
-from harness_optimizer.data import RandomSampler
+from strands_harness_optimizer.data import RandomSampler
 
 
 class FakeDataset:

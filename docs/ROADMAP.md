@@ -1,6 +1,6 @@
 # Harness Optimizer Implementation Roadmap
 
-> **Naming**: `ContextUnitProcessor` (CUP) has been renamed to `Formula`. Legacy names are available via `harness_optimizer.compat`. Both terms may appear in docs.
+> **Naming**: `ContextUnitProcessor` (CUP) has been renamed to `Formula`. Legacy names are available via `strands_harness_optimizer.compat`. Both terms may appear in docs.
 
 ## Stage 1: Formula on LLM Agent (completed)
 

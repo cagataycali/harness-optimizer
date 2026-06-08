@@ -4,7 +4,7 @@
 #     "pydoc-markdown>=4.8.2",
 # ]
 # ///
-"""Generate markdown documentation for harness_optimizer using pydoc-markdown.
+"""Generate markdown documentation for strands_harness_optimizer using pydoc-markdown.
 
 Adapted from strands-agents/docs/scripts/api-generation-python.py.
 
@@ -46,7 +46,7 @@ def generate_docs():
     # Configure the Python loader
     loader = PythonLoader(
         search_path=[input_path],
-        packages=["harness_optimizer"],
+        packages=["strands_harness_optimizer"],
     )
     session.loaders = [loader]
 
@@ -72,7 +72,7 @@ def generate_docs():
 
     # Modules to exclude from documentation
     excluded_modules = {
-        "harness_optimizer.compat",  # Legacy names, not primary API
+        "strands_harness_optimizer.compat",  # Legacy names, not primary API
     }
 
     module_files = []
@@ -91,10 +91,10 @@ def generate_docs():
             print(f"Skipping excluded module: {module_name}")
             continue
 
-        # Create subdirectory structure: harness_optimizer.formulas.formula -> formulas/formula.md
+        # Create subdirectory structure: strands_harness_optimizer.formulas.formula -> formulas/formula.md
         parts = module_name.split(".")
         if len(parts) > 1:
-            # Remove "harness_optimizer" prefix for path
+            # Remove "strands_harness_optimizer" prefix for path
             rel_parts = parts[1:]
         else:
             rel_parts = parts

@@ -1,4 +1,4 @@
-"""Shared test fixtures for harness_optimizer tests."""
+"""Shared test fixtures for strands_harness_optimizer tests."""
 
 import pytest
 

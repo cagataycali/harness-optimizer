@@ -6,10 +6,10 @@ import pytest
 from dotenv import load_dotenv
 from strands.models import BedrockModel
 
-from harness_optimizer.datamodels import Reward, Rollout
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.optimizers import ContrastiveReflectionOptimizer
-from harness_optimizer.utils import load_builtin_template
+from strands_harness_optimizer.datamodels import Reward, Rollout
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.optimizers import ContrastiveReflectionOptimizer
+from strands_harness_optimizer.utils import load_builtin_template
 
 load_dotenv()
 

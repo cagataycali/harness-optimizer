@@ -17,7 +17,7 @@ Note: Some frameworks (e.g., TRL) allow reward functions to access environments 
 A `RewardFunction` takes rollout data as keyword arguments and returns a dict with at least a `reward_value` field.
 
 ```python
-from harness_optimizer.rewards import RewardFunction
+from strands_harness_optimizer.rewards import RewardFunction
 
 class ExactMatchReward(RewardFunction):
     def __call__(self, **kwargs):

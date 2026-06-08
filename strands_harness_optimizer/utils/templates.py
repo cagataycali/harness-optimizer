@@ -5,7 +5,7 @@ import os
 from jinja2 import Template
 from jinja2.sandbox import SandboxedEnvironment
 
-# Built-in templates live under harness_optimizer/templates/
+# Built-in templates live under strands_harness_optimizer/templates/
 _BUILTIN_TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), os.pardir, "templates")
 
 _ENV = SandboxedEnvironment(autoescape=True)

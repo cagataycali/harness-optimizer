@@ -2,8 +2,8 @@
 
 Example:
     from strands import Agent
-    from harness_optimizer.formulas import SystemPromptFormula
-    from harness_optimizer.adapters.strands_adapter import StrandsAdapter
+    from strands_harness_optimizer.formulas import SystemPromptFormula
+    from strands_harness_optimizer.adapters.strands_adapter import StrandsAdapter
 
     adapter = StrandsAdapter()
     formula = SystemPromptFormula(system_prompt="You are an expert coder.")
@@ -11,7 +11,7 @@ Example:
     adapter.apply_to_agent([formula], agent)
 
     # Or use the convenience function:
-    from harness_optimizer.adapters import apply_formulas_on_strands_agent
+    from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
     apply_formulas_on_strands_agent(agent, [formula])
 """
 

@@ -16,7 +16,7 @@ Rollouts are scored by a [RewardFunction](./rewards.md) before being fed to the 
 Rollouts are expected to contain the data sample information alongside the conversation trace (in the `data_sample` key), so there is no separate `add_data_samples()` method.
 
 ```python
-from harness_optimizer.optimizers import FormulaOptimizer
+from strands_harness_optimizer.optimizers import FormulaOptimizer
 
 optimizer = MyOptimizer(formula)
 
@@ -81,7 +81,7 @@ class StatefulOptimizer(FormulaOptimizer):
 Subclass it to build custom agentic optimizers:
 
 ```python
-from harness_optimizer.optimizers import BaseAgenticOptimizer
+from strands_harness_optimizer.optimizers import BaseAgenticOptimizer
 
 class MyAgenticOptimizer(BaseAgenticOptimizer):
     def step(self):
@@ -100,7 +100,7 @@ class MyAgenticOptimizer(BaseAgenticOptimizer):
 `ToolOutputGuardrail` truncates excessive tool output and warns the agent. It's automatically registered on agents created by `BaseAgenticOptimizer`, but can be used independently:
 
 ```python
-from harness_optimizer.utils.guardrails import ToolOutputGuardrail
+from strands_harness_optimizer.utils.guardrails import ToolOutputGuardrail
 
 guardrail = ToolOutputGuardrail(max_chars=50000)
 guardrail.register(agent)

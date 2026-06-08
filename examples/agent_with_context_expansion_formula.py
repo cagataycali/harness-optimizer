@@ -14,8 +14,8 @@ Requirements:
 from strands import Agent
 from strands.models import BedrockModel
 
-from harness_optimizer.formulas import ContextExpansionFormula
-from harness_optimizer.adapters import StrandsAdapter
+from strands_harness_optimizer.formulas import ContextExpansionFormula
+from strands_harness_optimizer.adapters import StrandsAdapter
 
 
 def main():

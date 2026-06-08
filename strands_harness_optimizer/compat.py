@@ -1,20 +1,20 @@
 """Legacy names and module aliases for backward compatibility.
 
-This module serves as the target for the virtual `harness_optimizer.processors` module.
+This module serves as the target for the virtual `strands_harness_optimizer.processors` module.
 Only legacy names are exposed, with deprecation warnings:
 
     # Legacy names (deprecation warning)
-    from harness_optimizer.processors import ContextUnitProcessor, SystemPromptProcessor
+    from strands_harness_optimizer.processors import ContextUnitProcessor, SystemPromptProcessor
 
 For new code, use:
-    from harness_optimizer.formulas import Formula, SystemPromptFormula
+    from strands_harness_optimizer.formulas import Formula, SystemPromptFormula
 """
 
 import sys
 import warnings
 
-# Register this module as harness_optimizer.processors so legacy imports work.
-_parent = __name__.rsplit(".", 1)[0]  # "harness_optimizer"
+# Register this module as strands_harness_optimizer.processors so legacy imports work.
+_parent = __name__.rsplit(".", 1)[0]  # "strands_harness_optimizer"
 sys.modules[f"{_parent}.processors"] = sys.modules[__name__]
 
 
@@ -32,7 +32,7 @@ def __getattr__(name):
     if name in aliases:
         warnings.warn(
             f"{name} is deprecated, use {aliases[name].__name__} "
-            f"from harness_optimizer.formulas instead",
+            f"from strands_harness_optimizer.formulas instead",
             DeprecationWarning,
             stacklevel=2,
         )

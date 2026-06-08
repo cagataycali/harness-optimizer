@@ -2,9 +2,9 @@
 
 import pytest
 
-from harness_optimizer.datamodels import Rollout
-from harness_optimizer.formulas import Formula
-from harness_optimizer.rollout_engines import AgentRolloutEngine, LocalRolloutEngine
+from strands_harness_optimizer.datamodels import Rollout
+from strands_harness_optimizer.formulas import Formula
+from strands_harness_optimizer.rollout_engines import AgentRolloutEngine, LocalRolloutEngine
 
 
 class MockFormula(Formula):

@@ -1,12 +1,12 @@
 """Tests for the Trainer — full loop with mock components."""
 
-from harness_optimizer.data import DataLoader, Dataset
-from harness_optimizer.datamodels import Reward, Rollout
-from harness_optimizer.formulas import Formula
-from harness_optimizer.optimizers import FormulaOptimizer
-from harness_optimizer.rewards import RewardFunction
-from harness_optimizer.rollout_engines import AgentRolloutEngine
-from harness_optimizer.trainer import Trainer
+from strands_harness_optimizer.data import DataLoader, Dataset
+from strands_harness_optimizer.datamodels import Reward, Rollout
+from strands_harness_optimizer.formulas import Formula
+from strands_harness_optimizer.optimizers import FormulaOptimizer
+from strands_harness_optimizer.rewards import RewardFunction
+from strands_harness_optimizer.rollout_engines import AgentRolloutEngine
+from strands_harness_optimizer.trainer import Trainer
 
 
 class MockFormula(Formula):

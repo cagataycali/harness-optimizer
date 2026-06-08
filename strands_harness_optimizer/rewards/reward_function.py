@@ -6,7 +6,7 @@ Reward functions compute rewards and return a Reward object.
 
 from abc import ABC, abstractmethod
 
-from harness_optimizer.datamodels import Reward, Rollout
+from strands_harness_optimizer.datamodels import Reward, Rollout
 
 
 class RewardFunction(ABC):

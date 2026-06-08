@@ -9,8 +9,8 @@ import pytest
 from dotenv import load_dotenv
 from strands import Agent
 
-from harness_optimizer.adapters import StrandsAdapter
-from harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import StrandsAdapter
+from strands_harness_optimizer.formulas import SystemPromptFormula
 
 load_dotenv()
 

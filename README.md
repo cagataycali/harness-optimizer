@@ -27,7 +27,7 @@ A framework for optimizing LLM agent harness through Formulas.
 
 Harness Optimizer provides a framework for defining, attaching, and optimizing context units (e.g., system prompts) for LLM agents. The core idea: optimize the LLM agent harness by using tunable Formulas to dynamically enhance the agent, and improving those Formulas with optimizers based on collected agent rollout trajectories.
 
-> **Naming**: `ContextUnitProcessor` (CUP) has been renamed to `Formula`. Legacy names are available via `harness_optimizer.compat` with deprecation warnings.
+> **Naming**: `ContextUnitProcessor` (CUP) has been renamed to `Formula`. Legacy names are available via `strands_harness_optimizer.compat` with deprecation warnings.
 
 ## Architecture
 
@@ -77,15 +77,15 @@ Harness Optimizer provides a framework for defining, attaching, and optimizing c
 ## Installation
 
 ```bash
-pip install harness-optimizer
+pip install strands-harness-optimizer
 ```
 
 ## Quick Example
 
 ```python
 from strands import Agent
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.adapters import apply_formulas_on_strands_agent
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.adapters import apply_formulas_on_strands_agent
 
 # Create a Formula
 formula = SystemPromptFormula(system_prompt="You are a helpful assistant.")
@@ -158,7 +158,7 @@ class AgentRolloutEngine(ABC):
 ## Package Structure
 
 ```
-harness_optimizer/
+strands_harness_optimizer/
 ├── __init__.py
 ├── compat.py                       # Legacy names (ContextUnitProcessor, etc.)
 ├── trainer.py                      # Minimal training loop
@@ -199,7 +199,7 @@ harness_optimizer/
 ## Design Decisions
 
 1. **Dict-based data**: No wrapper classes for context or evaluation results — plain dicts throughout for simplicity and flexibility.
-2. **Formula = CUP**: `ContextUnitProcessor` renamed to `Formula`. Legacy names available via `harness_optimizer.compat`.
+2. **Formula = CUP**: `ContextUnitProcessor` renamed to `Formula`. Legacy names available via `strands_harness_optimizer.compat`.
 3. **Minimal dependencies**: Core depends on `strands-agents`, `strands-agents-tools`, `jinja2`, and `botocore` for the built-in adapter and optimizer.
 4. **PyTorch Dataset/DataLoader reuse**: Copied from PyTorch source with `torch` replaced by stdlib `random`. No PyTorch dependency.
 5. **Minimal Trainer**: Users can easily write their own training loop. The built-in Trainer is just two nested for-loops.

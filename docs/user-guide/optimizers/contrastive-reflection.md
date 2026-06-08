@@ -14,9 +14,9 @@ The `ContrastiveReflectionOptimizer` uses an LLM agent with shell tools to analy
 ## Quick start
 
 ```python
-from harness_optimizer.formulas import SystemPromptFormula
-from harness_optimizer.optimizers import ContrastiveReflectionOptimizer
-from harness_optimizer.utils import load_builtin_template
+from strands_harness_optimizer.formulas import SystemPromptFormula
+from strands_harness_optimizer.optimizers import ContrastiveReflectionOptimizer
+from strands_harness_optimizer.utils import load_builtin_template
 
 formula = SystemPromptFormula(system_prompt="You are a helpful assistant.")
 optimizer = ContrastiveReflectionOptimizer(
@@ -68,7 +68,7 @@ The library ships with templates for system prompt optimization:
 Load them with `load_builtin_template()`:
 
 ```python
-from harness_optimizer.utils import load_builtin_template
+from strands_harness_optimizer.utils import load_builtin_template
 
 system_tmpl = load_builtin_template("contrastive_reflection/system_prompt.jinja")
 task_tmpl = load_builtin_template("contrastive_reflection/task_message_system_prompt.jinja")
@@ -77,7 +77,7 @@ task_tmpl = load_builtin_template("contrastive_reflection/task_message_system_pr
 List all available templates:
 
 ```python
-from harness_optimizer.utils import list_builtin_templates
+from strands_harness_optimizer.utils import list_builtin_templates
 print(list_builtin_templates())
 # ['contrastive_reflection/system_prompt.jinja',
 #  'contrastive_reflection/task_message_system_prompt.jinja']
